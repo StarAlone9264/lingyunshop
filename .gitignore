@@ -1,0 +1,6 @@
+# Project exclude paths
+/lingyunshop-dao/target/
+/lingyunshop-entity/target/
+/lingyunshop-service/target/
+/lingyunshop-service-impl/target/
+/lingyunshop-web/target/
