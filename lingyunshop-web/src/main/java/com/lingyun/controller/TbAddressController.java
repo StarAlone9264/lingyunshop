@@ -2,6 +2,7 @@ package com.lingyun.controller;
 
 import com.lingyun.entity.TbAddress;
 import com.lingyun.service.TbAddressService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,7 +19,7 @@ public class TbAddressController {
     /**
      * 服务对象
      */
-    @Resource
+    @DubboReference
     private TbAddressService tbAddressService;
 
     /**

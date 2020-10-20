@@ -16,10 +16,6 @@
             <groupId>org.lingyun</groupId>
             <artifactId>lingyunshop-entity</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.lingyun</groupId>
-            <artifactId>lingyunshop-dao</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

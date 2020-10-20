@@ -4,21 +4,30 @@ server:
 spring:
   main:
     allow-bean-definition-overriding: true
+  datasource:
+    # 当前数据源操作类型
+    # mysql驱动类
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/youyougou?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
   application:
-    name: lingyunshop-web
+    name: lingyunshop-service
   cloud:
-    nacos:
+   nacos:
       discovery:
-        server-addr: http://nacos.xn--pbvz59g.xn--ses554g:80
-        group: LINGYUNSHOP_WEB
+        server-addr:  http://nacos.xn--pbvz59g.xn--ses554g:80
         namespace: ecaf7f7c-a523-4c52-8e8e-f4d907da85d4
+        group: LINGYUNSHOP_SERVICE
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
 
 dubbo:
   consumer:
     timeout: 600000
   scan:
     #自己向外提供服务的service的包地址
-    base-packages: cn.pubinfo.project.controller
+    base-packages: com.lingyun.service
   protocol:
     #dubbo协议
     name: dubbo

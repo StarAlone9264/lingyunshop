@@ -3,7 +3,7 @@ package com.lingyun.service.impl;
 import com.lingyun.dao.TbAddressDao;
 import com.lingyun.entity.TbAddress;
 import com.lingyun.service.TbAddressService;
-import org.springframework.stereotype.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-10-19 00:27:52
  */
-@Service("tbAddressService")
+@DubboService
 public class TbAddressServiceImpl implements TbAddressService {
     @Resource
     private TbAddressDao tbAddressDao;
