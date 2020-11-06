@@ -1,6 +1,5 @@
 server:
   port: 80
-
 spring:
   main:
     allow-bean-definition-overriding: true
@@ -8,16 +7,16 @@ spring:
     # 当前数据源操作类型
     # mysql驱动类
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/youyougou?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://39.99.143.9:3306/xxx?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: xxx
   application:
     name: lingyunshop-service
   cloud:
    nacos:
       discovery:
-        server-addr:  http://nacos.xn--pbvz59g.xn--ses554g:80
-        namespace: ecaf7f7c-a523-4c52-8e8e-f4d907da85d4
+        server-addr:  xxx
+        namespace: xxx
         group: LINGYUNSHOP_SERVICE
 mybatis:
   mapper-locations: classpath*:/mapper/*.xml
@@ -35,6 +34,6 @@ dubbo:
     port: -1
   #注册到nacos注册中心
   registry:
-    address: nacos://nacos.xn--pbvz59g.xn--ses554g:80
+    address: xxx
     register: true
     subscribe: true

@@ -9,6 +9,9 @@
         <module>lingyunshop-service</module>
         <module>lingyunshop-service-impl</module>
         <module>lingyunshop-web</module>
+        <module>lingyunshop-web-merchant</module>
+        <module>lingyunshop-web-portal</module>
+        <module>lingyunshop-common</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

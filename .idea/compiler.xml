@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lingyunshop-web" />
+        <module name="lingyunshop-service" />
+        <module name="lingyunshop-service-impl" />
+        <module name="lingyunshop-service-elasticsearch" />
+        <module name="lingyunshop-common" />
+        <module name="lingyunshop-web-portal" />
+        <module name="lingyunshop-web-merchant" />
+        <module name="lingyunshop-dao" />
+        <module name="lingyunshop-entity" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="lingyunshop" target="1.8" />
+      <module name="lingyunshop-common" target="1.8" />
+      <module name="lingyunshop-dao" target="1.8" />
+      <module name="lingyunshop-entity" target="1.8" />
+      <module name="lingyunshop-service" target="1.8" />
+      <module name="lingyunshop-service-elasticsearch" target="1.8" />
+      <module name="lingyunshop-service-impl" target="1.8" />
+      <module name="lingyunshop-web" target="1.8" />
+      <module name="lingyunshop-web-merchant" target="1.8" />
+      <module name="lingyunshop-web-portal" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lingyunshop-common" options="-parameters" />
+      <module name="lingyunshop-dao" options="-parameters" />
+      <module name="lingyunshop-entity" options="-parameters" />
+      <module name="lingyunshop-service" options="-parameters" />
+      <module name="lingyunshop-service-elasticsearch" options="-parameters" />
+      <module name="lingyunshop-service-impl" options="-parameters" />
+      <module name="lingyunshop-web" options="-parameters" />
+      <module name="lingyunshop-web-merchant" options="-parameters" />
+      <module name="lingyunshop-web-portal" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lingyun.dao.TbSpecificationOptionDao">
+    <resultMap id="TbSpecificationOptionMap" type="com.lingyun.entity.TbSpecificationOption">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="optionName" column="option_name" jdbcType="VARCHAR"/>
+        <result property="specId" column="spec_id" jdbcType="INTEGER"/>
+        <result property="orders" column="orders" jdbcType="INTEGER"/>
+    </resultMap>
+    <insert id="insert" parameterType="com.lingyun.entity.TbSpecificationOption">
+        insert into youyougou.tb_specification_option(option_name, spec_id, orders) VALUES (#{optionName},#{specId},#{orders})
+    </insert>
+    <update id="update" parameterType="com.lingyun.entity.TbSpecificationOption">
+        update
+            youyougou.tb_specification_option
+        set option_name = #{optionName} , spec_id = #{specId} , orders = #{orders}
+        where id = #{id}
+    </update>
+
+    <delete id="dncDel" parameterType="com.lingyun.entity.TbSpecificationOption">
+        delete
+        from
+             youyougou.tb_specification_option
+        where
+        <if test="id != null and id != 0 and id != ''">
+            id = #{id}
+        </if>
+        <if test="specId != null and specId != '' and specId != 0">
+            spec_id = #{specId}
+        </if>
+    </delete>
+
+    <select id="queryById" resultMap="TbSpecificationOptionMap">
+        select
+            id,option_name,spec_id,orders
+        from youyougou.tb_specification_option
+        where spec_id =#{specId}
+    </select>
+
+    <select id="dncQuery" resultType="com.lingyun.entity.TbSpecificationOption">
+        select
+            id,option_name,spec_id,orders
+        from youyougou.tb_specification_option
+        where
+        <if test="optionName != null and optionName !=''">
+            option_name = #{optionName}
+        </if>
+        <if test="id != null and id != 0">
+            and id = #{id}
+        </if>
+        <if test="specId != null and specId != 0">
+            and spec_id = #{specId}
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,41 @@
+server:
+  port: 2333
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+spring:
+  servlet:
+    multipart:
+      # 解决spring boot文件上传限制
+      max-request-size: 1000MB
+      max-file-size: 100MB
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: lingyunshop-web-merchant
+  cloud:
+    nacos:
+      discovery:
+        server-addr: xxx
+        group: LINGYUNSHOP_WEB
+        namespace: xxx
+dubbo:
+  consumer:
+    timeout: 600000
+  scan:
+    #自己向外提供服务的service的包地址
+    base-packages: com.lingyun.controller
+  protocol:
+    #dubbo协议
+    name: dubbo
+    #dubbo 协议端口（ -1 表示自增端口，从 20880 开始)
+    port: -1
+  #注册到nacos注册中心
+  registry:
+    address: xxx
+    register: true
+    subscribe: true
+# 图片服务器地址
+FILE_SERVER_URL: http://192.168.177.11/

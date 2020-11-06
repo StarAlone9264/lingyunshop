@@ -1,0 +1,32 @@
+server:
+  port: 2334
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+spring:
+  application:
+    name: lingyunshop-web-portal
+  cloud:
+    nacos:
+      discovery:
+        server-addr: xxx
+        group: LINGYUNSHOP_WEB
+        namespace: xxx
+dubbo:
+  consumer:
+    timeout: 600000
+  scan:
+    #自己向外提供服务的service的包地址
+    base-packages: com.lingyun.controller
+  protocol:
+    #dubbo协议
+    name: dubbo
+    #dubbo 协议端口（ -1 表示自增端口，从 20880 开始)
+    port: -1
+  #注册到nacos注册中心
+  registry:
+    address: xxx
+    register: true
+    subscribe: true
